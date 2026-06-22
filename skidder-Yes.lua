@@ -19,17 +19,33 @@ local Games = {
     }
 }
 
-for _, GameData in pairs(Games) do
+local foundGame = false
+
+for name, GameData in pairs(Games) do
+    print("Checking:", name)
+
     if GameData.IDs[game.PlaceId] then
-        if GameData.Link then
-            loadstring(game:HttpGet(GameData.Link))()
+        foundGame = true
+        print("Matched game:", name)
+
+        if GameData.Link and GameData.Link ~= "" then
+            local success, err = pcall(function()
+                loadstring(game:HttpGet(GameData.Link))()
+            end)
+
+            if not success then
+                warn("Failed to load script:", err)
+            else
+                print("Loaded successfully:", name)
+            end
         else
-            warn("No Support Game")
+            warn("No support link for:", name)
         end
+
         break
     end
 end
-        end
-        break
-    end
+
+if not foundGame then
+    warn("Game not supported! PlaceId:", game.PlaceId)
 end
