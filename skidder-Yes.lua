@@ -1,6 +1,6 @@
 local Games = {
     BF = {
-        Link = "https://luapot.com/api/loadstring/a2c50f97fbd8ddbcf2872611193b7db6",
+        Link = "https://raw.githubusercontent.com/Real-Nova-X-Hub/GameSupport/refs/heads/main/BloxFruit.lua",
         IDs = {
             [2753915549] = true,
             [85211729168715] = true,
@@ -11,27 +11,12 @@ local Games = {
         }
     },
 
-    DeadRails = {
-        Link = false,
-        IDs = {
-            [116495829188952] = true
-        }
-    },
-
     GrowAGarden2 = {
-        Link = false,
+        Link = "https://raw.githubusercontent.com/Real-Nova-X-Hub/GameSupport/refs/heads/main/GAG2.lua",
         IDs = {
-            [126884695634066] = true
-        }
-    },
-
-    Fisch = {
-        Link = false,
-        IDs = {
-            [16732694052] = true
+            [97598239454123] = true
         }
     }
-}
 
 for _, GameData in pairs(Games) do
     if GameData.IDs[game.PlaceId] then
