@@ -17,6 +17,7 @@ local Games = {
             [97598239454123] = true
         }
     }
+}
 
 for _, GameData in pairs(Games) do
     if GameData.IDs[game.PlaceId] then
@@ -24,6 +25,10 @@ for _, GameData in pairs(Games) do
             loadstring(game:HttpGet(GameData.Link))()
         else
             warn("No Support Game")
+        end
+        break
+    end
+end
         end
         break
     end
