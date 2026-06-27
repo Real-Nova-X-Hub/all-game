@@ -12,7 +12,7 @@ local Games = {
     },
 
     GrowAGarden2 = {
-        Link = "https://raw.githubusercontent.com/Real-Nova-X-Hub/GameSupport/refs/heads/main/GAG2.lua",
+        Link = false,
         IDs = {
             [97598239454123] = true
         }
