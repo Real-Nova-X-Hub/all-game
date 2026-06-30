@@ -1,6 +1,6 @@
 local Games = {
     BF = {
-        Link = "https://raw.githubusercontent.com/Real-Nova-X-Hub/GameSupport/refs/heads/main/BloxFruit.lua",
+        Link = "Other encryption can be used",
         IDs = {
             [2753915549] = true,
             [85211729168715] = true,
